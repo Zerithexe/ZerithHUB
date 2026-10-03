@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZerithHUB – Yetişkinlere özel sohbet ve içerik üreticileri</title>
+<meta name="description" content="ZerithHUB, 18 yaş üstü yetişkinler için flörtöz sohbet ve doğrulanmış içerik üreticileri platformudur.">
+<meta name="theme-color" content="#1a0b22">
+<meta name="rta" content="RTA-5042-1996-1400-1577-RTA">
+<meta property="og:title" content="ZerithHUB">
+<meta property="og:description" content="Yalnızca 18+ için sohbet ve içerik platformu.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a0b22'/%3E%3Ctext x='32' y='45' font-size='38' font-family='Georgia' font-weight='700' text-anchor='middle' fill='%23ff4d8d'%3EZ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="age-gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+  <div class="gate-box">
+    <h2 id="gate-title">ZerithHUB yalnızca yetişkinler içindir</h2>
+    <p>Bu site yetişkin içerik barındırır. Girmek için 18 yaşını (veya bulunduğunuz yerdeki reşit olma yaşını) doldurmuş olmanız gerekir.</p>
+    <div class="gate-actions">
+      <button id="gate-yes" class="btn primary">18 yaşından büyüğüm</button>
+      <a class="btn ghost" href="https://www.google.com">Ayrıl</a>
+    </div>
+    <noscript><p class="fine">Siteyi kullanmak için JavaScript'i etkinleştirin.</p></noscript>
+  </div>
+</div>
+
+<div id="app">
+<header class="top">
+  <a class="logo" href="#">Zerith<b>HUB</b></a>
+  <button class="menu-btn" id="menu-btn" aria-label="Menüyü aç" aria-expanded="false" aria-controls="nav">Menü</button>
+  <nav id="nav" aria-label="Ana menü">
+    <a href="#sohbet">Özel sohbet</a>
+    <a href="#ureticiler">İçerik üreticileri</a>
+    <a href="#planlar">Planlar</a>
+    <a href="#sss">SSS</a>
+    <button class="btn small primary" data-open-signup>Üye ol</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Aklından geçeni yaz. <em>Karşıda biri yazıyor.</em></h1>
+      <p>Doğrulanmış yetişkin içerik üreticileri ve rızası olan üyelerle özel, flörtöz sohbetler. Hızı sen belirlersin, istediğin an durdurursun.</p>
+      <div class="hero-cta">
+        <button class="btn primary" data-open-signup>Ücretsiz hesap oluştur</button>
+        <a class="btn ghost" href="#ureticiler">Üreticilere göz at</a>
+      </div>
+      <p class="fine">Yalnızca 18+. Tüm içerik üreticilerinin kimliği ve yaşı doğrulanmıştır.</p>
+    </div>
+
+    <div class="phone" aria-label="Sohbet önizlemesi">
+      <div class="phone-head"><span class="dot"></span> Mira <small>çevrimiçi</small></div>
+      <div class="msgs" id="msgs" aria-live="polite">
+        <div class="bubble them">Sonunda geldin. Epey bekletildim 😏</div>
+        <div class="bubble me">Cesaret toplamam gerekti.</div>
+        <div class="bubble them">İyi. Bu gece ne havasındasın, anlat bakalım.</div>
+      </div>
+      <div class="quick" id="quick">
+        <button data-q="Yavaş ve kışkırtıcı">Yavaş ve kışkırtıcı</button>
+        <button data-q="Beni şaşırt">Beni şaşırt</button>
+        <button data-q="Sadece sohbet edelim">Sadece sohbet</button>
+      </div>
+      <form class="say" id="say" autocomplete="off">
+        <label class="sr" for="say-input">Mesajın</label>
+        <input id="say-input" type="text" maxlength="120" placeholder="Bir şey yaz…">
+        <button class="btn small primary" type="submit">Gönder</button>
+      </form>
+      <div class="phone-foot">Demo sohbet. Yanıtlar önceden yazılmıştır.</div>
+    </div>
+  </section>
+
+  <section id="sohbet" class="band">
+    <h2>Sınırlarına saygı duyan sohbet</h2>
+    <div class="cols">
+      <article><h3>Önce sınırlarını belirle</h3><p>İstediğin ve istemediğin konuları seç. İlk mesajdan önce iki taraf da bunları görür.</p></article>
+      <article><h3>Engelle, sessize al, bildir</h3><p>Tek dokunuşla her sohbeti bitirebilirsin. Bildirimleri moderasyon ekibimiz inceler.</p></article>
+      <article><h3>Varsayılan olarak gizli</h3><p>Mesajların herkese açık değildir. Ücretli içeriklerin ekran görüntüleri izleyicinin kimliğiyle filigranlanır.</p></article>
+    </div>
+  </section>
+
+  <section id="ureticiler">
+    <div class="sec-head">
+      <h2>Öne çıkan üreticiler</h2>
+      <div class="chips" id="chips" role="group" aria-label="Üreticileri filtrele">
+        <button class="chip active" data-f="all" aria-pressed="true">Tümü</button>
+        <button class="chip" data-f="sohbet" aria-pressed="false">Sohbet</button>
+        <button class="chip" data-f="foto" aria-pressed="false">Fotoğraf</button>
+        <button class="chip" data-f="canli" aria-pressed="false">Canlı</button>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="note">Yer tutucu kartlar. Bunları yalnızca içerik sözleşmenizi imzalamış ve kimlik doğrulamasından geçmiş üreticilerin görselleriyle değiştirin.</p>
+  </section>
+
+  <section id="planlar" class="band">
+    <h2>Planını seç</h2>
+    <div class="plans">
+      <article class="plan">
+        <h3>Ücretsiz</h3><p class="price">₺0</p>
+        <ul><li>Profilleri gez</li><li>Günde 5 mesaj</li><li>Bulanık önizlemeler</li></ul>
+        <button class="btn ghost" data-open-signup>Kaydol</button>
+      </article>
+      <article class="plan feat">
+        <h3>Üye</h3><p class="price">₺399<small>/ay</small></p>
+        <ul><li>Sınırsız mesaj</li><li>Tam çözünürlüklü galeriler</li><li>İstediğin an iptal</li></ul>
+        <button class="btn primary" data-open-signup>Hemen katıl</button>
+      </article>
+      <article class="plan">
+        <h3>Patron</h3><p class="price">₺899<small>/ay</small></p>
+        <ul><li>Üye planındaki her şey</li><li>Öncelikli yanıt</li><li>Özel içerik talebi</li></ul>
+        <button class="btn ghost" data-open-signup>Hemen katıl</button>
+      </article>
+    </div>
+    <p class="note">Fiyatlar örnektir.</p>
+  </section>
+
+  <section id="sss">
+    <h2>Sık sorulan sorular</h2>
+    <div class="faq">
+      <details><summary>Üreticilerin yaşı nasıl doğrulanıyor?</summary><p>Her üretici, yayına başlamadan önce resmi kimlik ve canlı doğrulama ile 18 yaşını doldurduğunu kanıtlar.</p></details>
+      <details><summary>Rızası olmayan bir içerik görürsem ne yapmalıyım?</summary><p>İçeriğin altındaki "Bildir" bağlantısını kullanın. Bildirimler öncelikle incelenir ve ihlal eden içerik kaldırılır.</p></details>
+      <details><summary>Aboneliği nasıl iptal ederim?</summary><p>Hesap ayarlarından tek tıkla iptal edebilirsin. Dönem sonuna kadar erişimin sürer.</p></details>
+      <details><summary>Verilerim paylaşılıyor mu?</summary><p>Hayır. Verilerin üçüncü taraflara satılmaz. Ayrıntılar için gizlilik politikasına bak.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="year">2026</span> ZerithHUB. Tüm hakları saklıdır. Yalnızca 18+.</p>
+  <p class="fine">Tüm model ve oyuncular çekim sırasında 18 yaşından büyüktü. Kayıt belgeleri kayıt sorumlusunda saklanır. <a href="#">Kullanım koşulları</a> · <a href="#">Gizlilik / KVKK</a> · <a href="#">Çerezler</a> · <a href="#">İçerik kaldırma talebi</a></p>
+</footer>
+</div>
+
+<dialog id="signup" aria-labelledby="su-title">
+  <form method="dialog" id="su-form" novalidate>
+    <h2 id="su-title">Hesap oluştur</h2>
+    <label for="su-mail">E-posta</label>
+    <input id="su-mail" type="email" required autocomplete="email" placeholder="ornek@mail.com">
+    <label class="check"><input id="su-age" type="checkbox" required> 18 yaşını doldurduğumu ve koşulları kabul ettiğimi onaylıyorum.</label>
+    <p class="err" id="su-err" role="alert"></p>
+    <div class="gate-actions">
+      <button class="btn primary" type="submit" id="su-send">Devam et</button>
+      <button class="btn ghost" type="button" id="su-close">Vazgeç</button>
+    </div>
+    <p class="fine">Demo form: bilgiler hiçbir yere gönderilmez.</p>
+  </form>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
